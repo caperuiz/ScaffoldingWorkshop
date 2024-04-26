@@ -21,32 +21,32 @@ namespace ScaffoldingWorkshop
 
         public void Add(T entity)
         {
-            throw new NotImplementedException();
+            _dbSet.Add(entity);
         }
 
         public void Delete(T entity)
         {
-            throw new NotImplementedException();
+            _dbSet.Remove(entity);
         }
 
         public IEnumerable<T> Find(Expression<Func<T, bool>> predicate)
         {
-            throw new NotImplementedException();
+            return _dbSet.Where(predicate);
         }
 
         public IEnumerable<T> GetAll()
         {
-            throw new NotImplementedException();
+            return _dbSet.ToList();
         }
 
         public T GetById(int id)
         {
-            throw new NotImplementedException();
+            return _dbSet.Find(id);
         }
 
         public void Update(T entity)
         {
-            throw new NotImplementedException();
+            _dbSet.Update(entity);
         }
     }
 }
